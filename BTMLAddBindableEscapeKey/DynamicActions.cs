@@ -49,6 +49,8 @@ namespace BTMLAddBindableEscapeKey
                 {
                     Key.Space
                 });
+                Logger.LogLine("Setting void now Mouse4 default for escape");
+                __result.Escape.AddDefaultBinding(new MouseBindingSource(Mouse.Button4));
                 Logger.LogLine("New void escape defaults set!");
             }
         }

@@ -10,6 +10,12 @@ Downloads can be found on [Github](https://github.com/gponick/BTMLAddBindableEsc
 - If you want to change the settings do so in the mod.json.
 - Start the game.
 
+## Default Bindings
+
+`space`
+
+`Mouse4`
+
 ## Settings
 
 
