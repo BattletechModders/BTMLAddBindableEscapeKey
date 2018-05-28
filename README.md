@@ -1,7 +1,5 @@
 # BTMLAddBindableEscapeKey
-BattleTech Mod (using [BTML](https://github.com/Mpstark/BattleTechModLoader) and [ModTek](https://github.com/Mpstark/ModTek)) that keeps the sound going in the background when you tab out. I got super annoyed at not hearing the masterpiece that is [Jon Everist](http://everistsound.com/)'s works while chatting or modding. Seriously, go listen! [NOW!](https://open.spotify.com/artist/4DqJvNq10EAyXLdTIFoMK2).
-
-Also I guess you can hear your mechs get stomped into the ground while alt-tabbed. There's that too.
+BattleTech Mod (using [BTML](https://github.com/Mpstark/BattleTechModLoader) and [ModTek](https://github.com/Mpstark/ModTek)) that adds a keybind (default `space`) to the game that does the same thing as `Escape`.
 
 ## Download
 Downloads can be found on [Github](https://github.com/gponick/BTMLAddBindableEscapeKey/releases) 
@@ -17,11 +15,10 @@ Downloads can be found on [Github](https://github.com/gponick/BTMLAddBindableEsc
 
 Setting | Type | Default | Description
 --- | --- | --- | ---
-`enableSoundOnLostFocus` | `bool` | `true` | should sound be enabled when focus is lost
 
 ## Special Thanks
 
-HBS, @Mpstark, @Morphyum, @janxious, @CWolf
+HBS, @LadyAlekto, @Mpstark, @Morphyum, @janxious, @CWolf
 
 
 ## Maintainer Notes: New HBS Patch Instructions
