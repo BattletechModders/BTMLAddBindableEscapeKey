@@ -36,22 +36,29 @@ namespace BTMLAddBindableEscapeKey
         {
             public static void Postfix(ref StaticActions __result)
             {
-                Logger.LogLine("Postfix for CreateWDB fired");
-                Logger.LogLine("Clearing void Default Bindings for Escape");
+                Logger.LogLine("Clearing Default Bindings for 'Escape' Key");
                 __result.Escape.ClearBindings();
-                Logger.LogLine("Setting void Escape defaults for Escape");
+                Logger.LogLine("Setting Escape key as defaults for 'Escape'");
                 __result.Escape.AddDefaultBinding(new Key[]
                 {
                     Key.Escape
                 });
-                Logger.LogLine("Setting void Now Space Default for Escape");
-                __result.Escape.AddDefaultBinding(new Key[]
+                Logger.LogLine("Success Escape key as defaults for 'Escape'");
+                if (BTMLAddBindableEscapeKey.ModSettings.EnableSpaceKey)
                 {
-                    Key.Space
-                });
-                Logger.LogLine("Setting void now Mouse4 default for escape");
-                __result.Escape.AddDefaultBinding(new MouseBindingSource(Mouse.Button4));
-                Logger.LogLine("New void escape defaults set!");
+                    Logger.LogLine("Setting Space Default for Escape");
+                    __result.Escape.AddDefaultBinding(new Key[]
+                    {
+                        Key.Space
+                    });
+                    Logger.LogLine("Success Space Default for Escape");
+                }
+                if (BTMLAddBindableEscapeKey.ModSettings.EnableMouseButton)
+                { 
+                    Logger.LogLine($"Setting Mouse{BTMLAddBindableEscapeKey.ModSettings._escapeMouseButtonInput} default for escape");
+                    __result.Escape.AddDefaultBinding(new MouseBindingSource(BTMLAddBindableEscapeKey.ModSettings.EscapeMouseButton));
+                    Logger.LogLine("New Mouse escape defaults set!");
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
   "Name": "BTMLAddBindableEscapeKey",
   "Enabled": true,
 
-  "Version": "0.1.0",
+  "Version": "0.2.0",
 
   "Author": "gponick",
   "Website": "https://github.com/gponick/BTMLAddBindableEscapeKey",
@@ -13,5 +13,8 @@
   "ConflictsWith": [],
 
   "Settings": {
+    "escapeMouseButton": 4,
+    "enableSpaceKey": true,
+    "enableMouseButton": true
   }
 }

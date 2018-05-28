@@ -21,6 +21,9 @@ Downloads can be found on [Github](https://github.com/gponick/BTMLAddBindableEsc
 
 Setting | Type | Default | Description
 --- | --- | --- | ---
+escapeMouseButton | int | 4 | Which Mouse Button to Bind to. Default: `4`. Valid Values: `[4-9]`
+enableSpaceKey | bool | true | Enable Space Key
+enableMouseButton | bool | true | Enable Mouse Buttone
 
 ## Special Thanks
 
