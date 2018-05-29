@@ -1,4 +1,5 @@
 ﻿using InControl;
+using System.Collections.Generic;
 
 namespace BTMLAddBindableEscapeKey
 {
@@ -23,49 +24,21 @@ namespace BTMLAddBindableEscapeKey
         public Mouse EscapeMouseButton = Mouse.Button4;
         public int _escapeMouseButtonInput = 4;
 
+        public List<int> __additionalMouseButtons = new List<int>();
+
         public int escapeMouseButton
         {
             set
             {
                 _escapeMouseButtonInput = value;
-                if(value >= 4 && value <= 9)
+                if (value >= 4 && value <= 9)
                 {
-                    switch(value)
-                    {
-                        case 4:
-                            EscapeMouseButton = Mouse.Button4;
-                            break;
-                        case 5:
-                            EscapeMouseButton = Mouse.Button5;
-                            break;
-                        case 6:
-                            EscapeMouseButton = Mouse.Button6;
-                            break;
-                        case 7:
-                            EscapeMouseButton = Mouse.Button7;
-                            break;
-                        case 8:
-                            EscapeMouseButton = Mouse.Button8;
-                            break;
-                        case 9:
-                            EscapeMouseButton = Mouse.Button9;
-                            break;
-                        default:
-                            EscapeMouseButton = Mouse.Button4;
-                            break;
-                    }
-                }
-                if(value == 2)
-                {
-                    Logger.LogLine("WARNING THIS IS UNSUPPORTED. THIS MAY BREAK FUNCTIONALITY SINCE RIGHT MOUSE IS BOUND IN GAME A BUNCH OF PLACES!!!");
-                    EscapeMouseButton = Mouse.RightButton;
-                }
-                if (value == 3)
-                {
-                    Logger.LogLine("WARNING THIS IS UNSUPPORTED. THIS MAY BREAK FUNCTIONALITY SINCE RIGHT MOUSE IS BOUND IN GAME A BUNCH OF PLACES!!!");
-                    EscapeMouseButton = Mouse.RightButton;
+                    EscapeMouseButton = SettingsMouseHelper.GetButtonFromInt(value);
                 }
             }
         }
     }
 }
+
+
+ 

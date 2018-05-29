@@ -58,6 +58,17 @@ namespace BTMLAddBindableEscapeKey
                     Logger.LogLine($"Setting Mouse{BTMLAddBindableEscapeKey.ModSettings._escapeMouseButtonInput} default for escape");
                     __result.Escape.AddDefaultBinding(new MouseBindingSource(BTMLAddBindableEscapeKey.ModSettings.EscapeMouseButton));
                     Logger.LogLine("New Mouse escape defaults set!");
+
+                    foreach(int mouseButtonInt in BTMLAddBindableEscapeKey.ModSettings.__additionalMouseButtons)
+                    {
+                        if (mouseButtonInt >= 2 && mouseButtonInt <= 9)
+                        {
+                            Mouse mouseButtonFromInt = SettingsMouseHelper.GetButtonFromInt(mouseButtonInt);
+                            Logger.LogLine($"Setting Mouse{mouseButtonInt} default for escape via __additionalMouseButtons");
+                            __result.Escape.AddDefaultBinding(new MouseBindingSource(mouseButtonFromInt));
+                            Logger.LogLine($"Success Mouse{mouseButtonInt} default for escape via __aditionalMouseButtons");
+                        }
+                    }
                 }
             }
         }

@@ -24,6 +24,7 @@ Setting | Type | Default | Description
 escapeMouseButton | int | 4 | Which Mouse Button to Bind to. Default: `4`. Valid Values: `[4-9]`
 enableSpaceKey | bool | true | Enable Space Key
 enableMouseButton | bool | true | Enable Mouse Buttone
+__additionalMouseButtons | int[] | [] | Extra buttons to add. (This can bind Button 2/3. BE CAREFUL. THIS IS UNSUPPORTED!!!!!)
 
 ## Special Thanks
 

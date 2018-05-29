@@ -71,6 +71,7 @@
     <Compile Include="ReflectionHelper.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="DynamicActions.cs" />
+    <Compile Include="SettingsMouseHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\README.md">
